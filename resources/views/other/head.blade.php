@@ -120,6 +120,9 @@
             }
             }
     </style>
+    @vite(['resources/css/app.css', 'resources/css/loader.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="{{ asset('css/loader.css') }}">
+
 </body>
 </html>
 </head>

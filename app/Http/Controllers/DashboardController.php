@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class DashboardController extends Controller
 {
@@ -19,5 +20,11 @@ class DashboardController extends Controller
 
         // Return the dashboard view with user data
         return view('dashboard', compact('user'));
+    }
+
+    public function dashboard()
+    {
+        $userCount = User::count(); // Count total users
+        return view('dashboard', compact('userCount'));
     }
 }

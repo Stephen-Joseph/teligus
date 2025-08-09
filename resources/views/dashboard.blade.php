@@ -139,11 +139,11 @@
                     <div class="dashboard-card bg-white rounded-lg shadow p-5">
                         <div class="flex justify-between">
                             <div>
-                                <p class="text-gray-500 text-sm">Total Revenue</p>
-                                <h3 class="text-2xl font-bold text-gray-800">$24,780</h3>
+                                <p class="text-gray-500 text-sm">Total Users</p>
+                                <h3 class="text-2xl font-bold text-gray-800">{{ $userCount }}</h3>
                                 <p class="text-green-500 text-sm mt-1">
                                     <i class="fas fa-arrow-up mr-1"></i>
-                                    <span>12.5% from last month</span>
+                                    <span>{{ $userCount > 0 ? 'Active growth' : 'No users yet' }}</span>
                                 </p>
                             </div>
                             <div class="bg-blue-100 p-3 rounded-full">
